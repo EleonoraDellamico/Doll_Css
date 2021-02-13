@@ -11,12 +11,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-	/* background-size: 400% 400%;
+	background-size: 400% 400%;
 	animation: float 6s ease-in-out infinite;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-repeat: round;
 }
 @keyframes float {
 	0% {
@@ -30,7 +30,7 @@ body {
 	100% {
 		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
 		transform: translatey(0px);
-	} */
+	}
 }
 .dark-mode {
 	background-image: url("./img/night2.jpg");
@@ -99,7 +99,7 @@ p {
 /* START DOLL*/
 #Color {
 	/* background: #194488; */
-	background-color: #e7b5ec;
+	background-color: #87d0a1;
 }
 
 .container-0 {
