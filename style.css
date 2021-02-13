@@ -89,7 +89,6 @@ body {
 
 #speech-bubble p {
 	border-right: .15em solid red;
-	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -297,3 +296,30 @@ body {
 	top: 200px;
 }
 /* END DOLL*/
+
+/* START FOOTER */
+footer {
+	width: 100%;
+	background-color: antiquewhite;
+	height: fit-content;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+}
+.footer {
+	background-color: antiquewhite;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: fit-content;
+	padding: 10px 10px 20px 10px;
+}
+img {
+	width: 30px;
+	height: auto;
+}
+small {
+	font-family: 'Press Start 2P', cursive;
+	font-size: 10px;
+}
