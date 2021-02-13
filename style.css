@@ -1,0 +1,232 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: float 6s ease-in-out infinite;
+	display: flex;
+	align-items: center;
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+		transform: translatey(-30px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+}
+.container-bubble {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-self: self-start;
+	margin-top: 148px;
+}
+#speech-bubble {
+	width: auto;
+	max-width: 75%;
+	height: auto;
+	background-color: #fff;
+	padding: 10px;
+	display: inline-block;
+	margin: 30px 30px 70px;
+	position: relative;
+
+	box-shadow: 0 -10px 0 #fff, 0 -20px 0 #000, -10px 0 0 #fff, -20px 0 0 #000, 0 10px 0 #fff, 0 20px 0 #000,
+		10px 0 0 #fff, 20px 0 0 #000, -10px -10px 0 #000, 10px 10px 0 #000, -10px 10px 0 #000, 10px -10px 0 #000;
+}
+
+p {
+	min-width: 25px;
+	display: inline-block;
+	margin: 0;
+	font-size: 12px;
+	font-family: 'Press Start 2P', cursive;
+	line-height: 1.5em;
+	position: relative;
+}
+
+/*MUÑECO*/
+#Color {
+	background: #194488;
+}
+
+.container-0 {
+	position: absolute;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	background: transparent;
+	z-index: 1;
+	animation: gradiente 15s ease infinite;
+}
+@keyframes gradiente {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.head {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	border-radius: 50%;
+	top: 56px;
+}
+.body {
+	width: 300px;
+	height: 214px;
+	border-radius: 25px 25px 50px 50px;
+	position: relative;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	top: 202px;
+	z-index: -1;
+}
+
+/* .arm1 {
+	width: 70px;
+	height: 107px;
+	z-index: -1;
+	position: absolute;
+	margin: 0 auto;
+	left: 298px;
+	top: 210px;
+	border-radius: 64px 36px 50px 50px;
+	transform: rotate(-60deg);
+}
+
+.arm2 {
+	width: 70px;
+	height: 107px;
+	background: #ff62ab;
+	z-index: -1;
+	position: absolute;
+	margin: 0 auto;
+	right: 298px;
+	top: 210px;
+	border-radius: 50px 0px 50px 50px;
+	transform: rotate(-118deg);
+}
+ */
+/* .leg1 {
+	width: 70px;
+	height: 170px;
+	z-index: -1;
+	position: absolute;
+	margin: 0 auto;
+	left: 440px;
+	top: 310px;
+	border-radius: 0px 0px 20px 20px;
+} */
+
+/* .leg2 {
+	width: 70px;
+	height: 170px;
+	z-index: -1;
+	position: absolute;
+	margin: 0 auto;
+	right: 440px;
+	top: 310px;
+	border-radius: 00px 0px 20px 20px;
+	transform: rotateY(180deg);
+} */
+
+#eye-1 {
+	height: 51px;
+	width: 50px;
+	border-radius: 50px;
+	background: black;
+	margin-top: 90px;
+	margin-left: 50px;
+	animation: blink 3s ease-in-out infinite;
+}
+.blush1 {
+	background-color: #ec97eabf;
+	height: 26px;
+	width: 31px;
+	border-radius: 50px;
+	margin-left: 59px;
+}
+
+#eye-2 {
+	height: 51px;
+	width: 50px;
+	border-radius: 50px;
+	background: black;
+	margin-top: -76px;
+	margin-left: 202px;
+	animation: blink 3.5s ease-in-out infinite;
+}
+.blush2 {
+	background-color: #ec97eabf;
+	height: 26px;
+	width: 31px;
+	border-radius: 50px;
+	margin-left: 213px;
+}
+@keyframes blink {
+	85% {
+		transform: rotateX(0deg);
+	}
+	90% {
+		transform: rotateX(90deg);
+	}
+}
+.pupil-1 {
+	width: 20px;
+	height: 20px;
+	background: white;
+	border-radius: 20px;
+	margin: 0px 0px 0px 10px;
+}
+
+.pupil-2 {
+	width: 10px;
+	height: 10px;
+	background: white;
+	border-radius: 5px;
+	margin: 5px 0px 0px 10px;
+}
+
+.pupil-2right {
+	width: 10px;
+	height: 10px;
+	background: white;
+	border-radius: 5px;
+	margin: 5px 0px 0px 15px;
+}
+
+.mouth {
+	Background: #000;
+	height: 100px;
+	width: 50px;
+	border-radius: 0 100px 100px 0;
+	transform: rotate(90deg);
+	position: absolute;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	top: 200px;
+}
