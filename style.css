@@ -80,19 +80,92 @@ body {
 	/* display: inline-block; */
 	margin: 30px 30px 70px;
 	position: relative;
-
+	display: flex;
+	flex-direction: column;
+	width: 373px;
 	box-shadow: 0 -10px 0 #fff, 0 -20px 0 #000, -10px 0 0 #fff, -20px 0 0 #000, 0 10px 0 #fff, 0 20px 0 #000,
 		10px 0 0 #fff, 20px 0 0 #000, -10px -10px 0 #000, 10px 10px 0 #000, -10px 10px 0 #000, 10px -10px 0 #000;
 }
 
-p {
-	min-width: 25px;
+#speech-bubble p {
+	border-right: .15em solid red;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+	color: black;
 	display: inline-block;
 	margin: 0;
 	font-size: 12px;
 	font-family: 'Press Start 2P', cursive;
-	line-height: 1.5em;
 	position: relative;
+	line-height: 1.6;
+}
+#speech-bubble p:nth-child(1) {
+	width: 100%;
+	-webkit-animation: type 2s steps(40, end);
+	animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+#speech-bubble p:nth-child(2) {
+	width: 100%;
+	opacity: 0;
+	-webkit-animation: type2 2s steps(40, end);
+	animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+#speech-bubble p:nth-child(3) {
+	width: 100%;
+	opacity: 0;
+	animation: type2 2s steps(20, end), blink .5s step-end infinite alternate;
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	color: black;
+	z-index: 200;
+}
+@keyframes type {
+	0% {
+		width: 0;
+	}
+	99.9% {
+		border-right: .15em solid red;
+	}
+	100% {
+		border: none;
+	}
+}
+
+@keyframes type2 {
+	0% {
+		width: 0;
+	}
+	1% {
+		opacity: 1;
+	}
+	99.9% {
+		border-right: .15em solid red;
+	}
+	100% {
+		opacity: 1;
+		border: none;
+	}
+}
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}
+@-webkit-keyframes blink {
+	50% {
+		border-color: tranparent;
+	}
 }
 
 /* END BUBBLE*/
