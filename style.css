@@ -33,6 +33,8 @@ body {
 	margin-top: 90px;
 	width: fit-content;
 	height: auto;
+	box-shadow: 5px 10px;
+	border-radius: 10px;
 }
 button {
 	width: 100%;
